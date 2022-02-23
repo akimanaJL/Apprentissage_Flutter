@@ -1,8 +1,39 @@
-// Les citations
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:framework_flutter/util/hexcolor.dart';
+
+class QuizApp extends StatefulWidget {
+  const QuizApp({Key? key}) : super(key: key);
+
+  @override
+  _QuizAppState createState() => _QuizAppState();
+}
+
+class _QuizAppState extends State<QuizApp> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Abarundi n' Abarundikazi"),
+        centerTitle: true,
+        backgroundColor: Colors.deepOrange,
+      ),
+      backgroundColor: Colors.greenAccent,
+      body: Container(
+        child: Column(
+          children: [
+            Image(
+              image: AssetImage("build/images/index.png"),
+              width: 250,
+              height: 180,
+            )
+          ],
+        ),
+      ),
+    );
+  }
+}
 
 class BillSplitter extends StatefulWidget {
   const BillSplitter({Key? key}) : super(key: key);

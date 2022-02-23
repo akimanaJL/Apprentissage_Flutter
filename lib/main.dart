@@ -9,7 +9,7 @@ import 'package:flutter/material.dart';
 import 'ui/home.dart';
 
 void main() => runApp(new MaterialApp(
-      home: BillSplitter(),
+      home: QuizApp(),
     ));
 // home muriyo main iratandukanye na class home twamye dukoresha iratandukanye
 //kandi na home fichier ni propriétés ya MaterialApp
