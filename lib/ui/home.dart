@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:framework_flutter/model/question.dart';
 import 'package:framework_flutter/util/hexcolor.dart';
 
 class QuizApp extends StatefulWidget {
@@ -11,6 +12,19 @@ class QuizApp extends StatefulWidget {
 }
 
 class _QuizAppState extends State<QuizApp> {
+  List questionBank = [
+    Question.name("Umwami wa mbere yatwaye Uburundi ni Ntare Rugamba.", true),
+    Question.name("Uburundi bwikukiye itariki 1 myandagaro 1962.", true),
+    Question.name(
+        "Incungu yo kwikukira k'uburundi ni Melchior NDADAYE.", false),
+    Question.name("Igihugu ca mbere ca kolonije Uburundi ni Ububirigi.", false),
+    Question.name("Uburundi bwakoronijwe n'ibihugu 4.", false),
+    Question.name("Incungu ya demokarasi ni Melchiol Ndandaye.", true),
+    Question.name("Abakuru b'ibihugu bamaze gutwara Uburundi ni 7.", false),
+    Question.name("Uburundi bugizwe n'intara 18.", true),
+    Question.name("Umurwa mukuru w'uburundi ni Ngozi", false),
+    Question.name("Ururimi rukoreshwa cane mu Burundi n'ikirundi", true)
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,12 +36,23 @@ class _QuizAppState extends State<QuizApp> {
       backgroundColor: Colors.greenAccent,
       body: Container(
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Image(
-              image: AssetImage("build/images/index.png"),
-              width: 250,
-              height: 180,
-            )
+            Center(
+              child: Image.asset(
+                "build/images/index.png",
+                //Image(
+                //image: AssetImage("build/images/index.png"),
+
+                width: 200,
+                height: 150,
+              ),
+            ),
+            Container(
+              height: 120.0,
+              child: Text(questionBank[5].questionText),
+            ),
+            Spacer(),
           ],
         ),
       ),
