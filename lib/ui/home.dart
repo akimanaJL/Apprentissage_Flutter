@@ -92,7 +92,7 @@ class _QuizAppState extends State<QuizApp> {
                     onPressed: () => _checkAnswer(true, context),
                     color: Colors.blueGrey.shade900,
                     child: Text(
-                      "TRUE",
+                      "EGO",
                       style: TextStyle(color: Colors.white),
                     ),
                   ),
@@ -100,7 +100,7 @@ class _QuizAppState extends State<QuizApp> {
                     onPressed: () => _checkAnswer(false, context),
                     color: Colors.blueGrey.shade900,
                     child: Text(
-                      "FALSE",
+                      "OYA",
                       style: TextStyle(color: Colors.white),
                     ),
                   ),
@@ -127,20 +127,20 @@ class _QuizAppState extends State<QuizApp> {
       final snackbar = SnackBar(
           backgroundColor: Colors.green,
           duration: Duration(milliseconds: 500),
-          content: Text("Correct"));
+          content: Text("Wagitoye"));
       Scaffold.of(context).showSnackBar(snackbar);
 
-      setState(() {
-        _currentQuestionIndex++;
-      });
+      //setState(() {
+      //_currentQuestionIndex++;
+      //});
     } else {
-      debugPrint("Incorrect!");
+      //debugPrint("Incorrect!");
       final snackbar = SnackBar(
           backgroundColor: Colors.redAccent,
           duration: Duration(milliseconds: 500),
-          content: Text("Incorrect"));
+          content: Text("Cakunaniye"));
       Scaffold.of(context).showSnackBar(snackbar);
-      _updateQuestion();
+      //_updateQuestion();
     }
   }
 
@@ -551,6 +551,7 @@ class BizCard extends StatelessWidget {
   }
 }
 
+/*
 class ScaffoldExample extends StatelessWidget {
   _tapButton() {
     debugPrint("Tapped button");
@@ -611,6 +612,7 @@ class ScaffoldExample extends StatelessWidget {
     );
   }
 }
+ */
 
 class CustomButton extends StatelessWidget {
   const CustomButton({Key? key}) : super(key: key);
